@@ -1,0 +1,44 @@
+|===
+|Path|Type|Description
+
+|`+content+`
+|`+Array+`
+|A list of products orders
+
+|`+content[].identifier+`
+|`+String+`
+|Product identifier
+
+|`+content[].email+`
+|`+String+`
+|Email of the product order
+
+|`+content[].date+`
+|`+String+`
+|Date of the product order
+
+|`+content[].total+`
+|`+Number+`
+|Total cost of the product order
+
+|`+content[].parcels+`
+|`+Array+`
+|List of parcel of the product order
+
+|`+content[].parcels[].product+`
+|`+String+`
+|Product name of one parcel
+
+|`+content[].parcels[].price+`
+|`+Number+`
+|Product price of one parcel
+
+|`+content[].parcels[].amount+`
+|`+Number+`
+|Product amount of one parcel
+
+|`+content[].parcels[].total+`
+|`+Number+`
+|Product total value of one parcel
+
+|===

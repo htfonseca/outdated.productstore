@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+GET /store/productorders/7aedad38-05c1-4b98-9bf5-a7009ea09c7a HTTP/1.1
+Accept-Language: en
+Accept: application/hal+json;charset=UTF-8
+Host: localhost:8080
+
+----

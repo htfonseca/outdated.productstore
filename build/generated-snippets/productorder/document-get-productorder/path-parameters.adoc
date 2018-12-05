@@ -1,0 +1,8 @@
+.+/store/productorders/{identifier}+
+|===
+|Parameter|Description
+
+|`+identifier+`
+|Identifier of the product order.
+
+|===

@@ -1,0 +1,75 @@
+[source,options="nowrap"]
+----
+{
+  "content" : [ {
+    "identifier" : "3b98b6ad-e80f-4f33-8b32-d35701034b37",
+    "email" : "user1@gmail.com",
+    "date" : "2018-12-05",
+    "parcels" : [ {
+      "product" : "Product1",
+      "price" : 1.11,
+      "amount" : 1,
+      "total" : 1.11
+    }, {
+      "product" : "Product2",
+      "price" : 2.22,
+      "amount" : 2,
+      "total" : 4.44
+    } ],
+    "total" : 5.55,
+    "_links" : {
+      "self" : {
+        "href" : "http://localhost:8080/store/productorders/3b98b6ad-e80f-4f33-8b32-d35701034b37"
+      }
+    }
+  }, {
+    "identifier" : "a040a02e-9610-42ab-86e3-e8a3228df3fd",
+    "email" : "user2@gmail.com",
+    "date" : "2018-12-05",
+    "parcels" : [ {
+      "product" : "Product1",
+      "price" : 1.11,
+      "amount" : 1,
+      "total" : 1.11
+    }, {
+      "product" : "Product3",
+      "price" : 3.33,
+      "amount" : 3,
+      "total" : 9.99
+    } ],
+    "total" : 11.1,
+    "_links" : {
+      "self" : {
+        "href" : "http://localhost:8080/store/productorders/a040a02e-9610-42ab-86e3-e8a3228df3fd"
+      }
+    }
+  }, {
+    "identifier" : "7ec2de1e-32e9-4076-be05-b569aec4d1f8",
+    "email" : "user3@gmail.com",
+    "date" : "2018-12-05",
+    "parcels" : [ {
+      "product" : "Product2",
+      "price" : 2.22,
+      "amount" : 2,
+      "total" : 4.44
+    }, {
+      "product" : "Product3",
+      "price" : 3.33,
+      "amount" : 3,
+      "total" : 9.99
+    } ],
+    "total" : 14.43,
+    "_links" : {
+      "self" : {
+        "href" : "http://localhost:8080/store/productorders/7ec2de1e-32e9-4076-be05-b569aec4d1f8"
+      }
+    }
+  } ],
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/store/productorders?start={start}&end={end}",
+      "templated" : true
+    }
+  }
+}
+----

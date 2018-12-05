@@ -1,0 +1,20 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 347
+
+{
+  "identifier" : "8ac196d0-a728-4353-8c93-e8c204ce80e7",
+  "name" : "Product1",
+  "price" : 1.11,
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/store/products/8ac196d0-a728-4353-8c93-e8c204ce80e7"
+    },
+    "update" : {
+      "href" : "http://localhost:8080/store/products/8ac196d0-a728-4353-8c93-e8c204ce80e7"
+    }
+  }
+}
+----

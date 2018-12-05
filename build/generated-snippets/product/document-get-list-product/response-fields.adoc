@@ -1,0 +1,20 @@
+|===
+|Path|Type|Description
+
+|`+content+`
+|`+Array+`
+|A list of products
+
+|`+content[].identifier+`
+|`+String+`
+|Product identifier
+
+|`+content[].name+`
+|`+String+`
+|Product name
+
+|`+content[].price+`
+|`+Number+`
+|Product price
+
+|===

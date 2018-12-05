@@ -1,0 +1,55 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 1313
+
+{
+  "content" : [ {
+    "identifier" : "26fa4cf2-2c11-4db9-9d23-57cae813eb67",
+    "name" : "Product1",
+    "price" : 1.11,
+    "_links" : {
+      "self" : {
+        "href" : "http://localhost:8080/store/products/26fa4cf2-2c11-4db9-9d23-57cae813eb67"
+      },
+      "update" : {
+        "href" : "http://localhost:8080/store/products/26fa4cf2-2c11-4db9-9d23-57cae813eb67"
+      }
+    }
+  }, {
+    "identifier" : "e4e65f05-0d47-4c78-9a8a-eccfdb9afa67",
+    "name" : "Product2",
+    "price" : 2.22,
+    "_links" : {
+      "self" : {
+        "href" : "http://localhost:8080/store/products/e4e65f05-0d47-4c78-9a8a-eccfdb9afa67"
+      },
+      "update" : {
+        "href" : "http://localhost:8080/store/products/e4e65f05-0d47-4c78-9a8a-eccfdb9afa67"
+      }
+    }
+  }, {
+    "identifier" : "d7c73547-4cee-41ad-b4ac-fc36c07a20d3",
+    "name" : "Product3",
+    "price" : 3.33,
+    "_links" : {
+      "self" : {
+        "href" : "http://localhost:8080/store/products/d7c73547-4cee-41ad-b4ac-fc36c07a20d3"
+      },
+      "update" : {
+        "href" : "http://localhost:8080/store/products/d7c73547-4cee-41ad-b4ac-fc36c07a20d3"
+      }
+    }
+  } ],
+  "size" : 20,
+  "number" : 0,
+  "totalPages" : 1,
+  "totalElements" : 3,
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/store/products/page"
+    }
+  }
+}
+----

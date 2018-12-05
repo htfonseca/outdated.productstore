@@ -1,0 +1,182 @@
+= Product REST Service API Guide
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+== Product
+
+Product API guide
+
+// ***********************************************************************************
+
+[[resources-create-product]]
+=== Create a product
+
+Create a product and store it in the database.
+
+[[resources-create-product-access]]
+==== Request
+
+A `POST` request is used to send the information of the new product to be added.
+
+Path parameters:
+
+include::{snippets}/product/document-create-product/http-request.adoc[]
+
+include::{snippets}/product/document-create-product/curl-request.adoc[]
+
+==== Request fields
+
+include::{snippets}/product/document-create-product/request-fields.adoc[]
+
+==== Example response
+
+include::{snippets}/product/document-create-product/http-response.adoc[]
+
+==== Response fields
+
+include::{snippets}/product/document-create-product/response-fields.adoc[]
+
+[[resources-create-product-links]]
+==== Links
+
+include::{snippets}/product/document-create-product/links.adoc[]
+
+// ***********************************************************************************
+
+[[resources-get-product]]
+=== Get a product
+
+Get a product from the database
+
+[[resources-get-product-access]]
+==== Request
+
+A `GET` request is used to get a product that was added.
+
+Path parameters:
+
+include::{snippets}/product/document-get-product/path-parameters.adoc[]
+
+include::{snippets}/product/document-get-product/http-request.adoc[]
+
+include::{snippets}/product/document-get-product/curl-request.adoc[]
+
+==== Example response
+
+include::{snippets}/product/document-get-product/http-response.adoc[]
+
+==== Response fields
+
+include::{snippets}/product/document-get-product/response-fields.adoc[]
+
+[[resources-get-product-links]]
+==== Links
+
+include::{snippets}/product/document-get-product/links.adoc[]
+
+// ***********************************************************************************
+
+[[resources-get-list-product]]
+=== Get a list of products
+
+Get a list of products from the database
+
+[[resources-get-list-product-access]]
+==== Request
+
+A `GET` request is used to get a list of products that was added.
+
+Path parameters:
+
+include::{snippets}/product/document-get-list-product/http-request.adoc[]
+
+include::{snippets}/product/document-get-list-product/curl-request.adoc[]
+
+==== Example response
+
+include::{snippets}/product/document-get-list-product/http-response.adoc[]
+
+==== Response fields
+
+include::{snippets}/product/document-get-list-product/response-fields.adoc[]
+
+[[resources-get-list-product-links]]
+==== Links
+
+include::{snippets}/product/document-get-list-product/links.adoc[]
+
+// ***********************************************************************************
+
+[[resources-get-page-product]]
+=== Get a page of products
+
+Get a page of products from the database
+
+[[resources-get-page-product-access]]
+==== Request
+
+A `GET` request is used to get a page of products that was added.
+
+Path parameters:
+
+include::{snippets}/product/document-get-page-product/http-request.adoc[]
+
+include::{snippets}/product/document-get-page-product/curl-request.adoc[]
+
+==== Example response
+
+include::{snippets}/product/document-get-page-product/http-response.adoc[]
+
+==== Response fields
+
+include::{snippets}/product/document-get-page-product/response-fields.adoc[]
+
+[[resources-get-page-product-links]]
+==== Links
+
+include::{snippets}/product/document-get-page-product/links.adoc[]
+
+// ***********************************************************************************
+
+[[resources-update-product]]
+=== Update a product
+
+Update a product and store it in the database.
+
+[[resources-update-product-access]]
+==== Request
+
+A `POST` request is used to update the information of the product.
+
+Path parameters:
+
+include::{snippets}/product/document-update-product/path-parameters.adoc[]
+
+include::{snippets}/product/document-update-product/http-request.adoc[]
+
+include::{snippets}/product/document-update-product/curl-request.adoc[]
+
+==== Request fields
+
+include::{snippets}/product/document-update-product/request-fields.adoc[]
+
+==== Example response
+
+include::{snippets}/product/document-update-product/http-response.adoc[]
+
+==== Response fields
+
+include::{snippets}/product/document-update-product/response-fields.adoc[]
+
+[[resources-create-update-links]]
+==== Links
+
+include::{snippets}/product/document-update-product/links.adoc[]
+
+// ***********************************************************************************
+
+

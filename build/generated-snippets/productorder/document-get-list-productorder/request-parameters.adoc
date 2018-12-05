@@ -1,0 +1,10 @@
+|===
+|Parameter|Description
+
+|`+start+`
+|Start date to fetch the product orders.
+
+|`+end+`
+|End date to fetch the product orders.
+
+|===

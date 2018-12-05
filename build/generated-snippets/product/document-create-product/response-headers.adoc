@@ -1,0 +1,7 @@
+|===
+|Name|Description
+
+|`+Location+`
+|Location of created product resource.
+
+|===

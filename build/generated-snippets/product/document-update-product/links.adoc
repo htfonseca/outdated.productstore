@@ -1,0 +1,10 @@
+|===
+|Relation|Description
+
+|`+self+`
+|Link to the product resource itself
+
+|`+update+`
+|Link to the product update
+
+|===

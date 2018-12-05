@@ -1,0 +1,17 @@
+= Store API Guide
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
+:numbered: ''
+:docinfo: shared
+
+[[resources]]
+== Resource Contexts
+
+=== <<api-guide-products.adoc#, Products API Context>>
+
+=== <<api-guide-productorderss.adoc#, Products Orders API Context>>
+

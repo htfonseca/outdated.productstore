@@ -1,0 +1,25 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 201 Created
+Content-Length: 382
+Location: http://localhost:8080/store/productorders/9575abb2-8282-45d4-96ab-04db575141e4
+Content-Type: application/hal+json;charset=UTF-8
+
+{
+  "identifier" : "9575abb2-8282-45d4-96ab-04db575141e4",
+  "email" : "newUser@gmail.com",
+  "date" : "2018-12-05",
+  "parcels" : [ {
+    "product" : "Product1",
+    "price" : 1.11,
+    "amount" : 4,
+    "total" : 4.44
+  } ],
+  "total" : 4.44,
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/store/productorders/9575abb2-8282-45d4-96ab-04db575141e4"
+    }
+  }
+}
+----

@@ -1,0 +1,21 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 201 Created
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 356
+Location: http://localhost:8080/store/products/1306d388-8f57-49ea-9eea-fe5e7199736f
+
+{
+  "identifier" : "1306d388-8f57-49ea-9eea-fe5e7199736f",
+  "name" : "MyTestProductName",
+  "price" : 4.44,
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/store/products/1306d388-8f57-49ea-9eea-fe5e7199736f"
+    },
+    "update" : {
+      "href" : "http://localhost:8080/store/products/1306d388-8f57-49ea-9eea-fe5e7199736f"
+    }
+  }
+}
+----
