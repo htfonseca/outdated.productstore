@@ -7,32 +7,32 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-/** Simple advice to catch and deal with a resource not found exception */
+/** Simple advice to catch and deal with throw exceptions. */
 @ControllerAdvice
 public class ErrorController {
 
   /**
-   * Exception handler for the ResourceNotFoundException.class
+   * Exception handler for the {@link ResourceNotFoundException}.
    *
-   * @param ex The resource exception
-   * @return a response to be send to the request
+   * @param exception The resource exception object
+   * @return a {@link ResponseEntity} to be send with the http code not found
    */
   @ExceptionHandler(ResourceNotFoundException.class)
-  public ResponseEntity<?> handleMethodArgumentNotValid(ResourceNotFoundException ex) {
+  public ResponseEntity<?> handleMethodArgumentNotValid(ResourceNotFoundException exception) {
 
-    return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    return ResponseEntity.status(HttpStatus.NOT_FOUND).body(exception.getMessage());
   }
 
   /**
-   * Exception handler for the PreconditionViolationException.class
+   * Exception handler for the {@link PreconditionViolationException}.
    *
-   * @param ex The resource exception
-   * @return a response to be send to the request
+   * @param exception The resource exception object
+   * @return a {@link ResponseEntity} to be send with the http code bad request
    */
   @ExceptionHandler(PreconditionViolationException.class)
   public ResponseEntity<?> handlePreconditionValidationException(
-      PreconditionViolationException ex) {
+      PreconditionViolationException exception) {
 
-    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(exception.getMessage());
   }
 }

@@ -8,11 +8,12 @@ import java.util.UUID;
 @MappedSuperclass
 public abstract class AbstractEntity {
 
+  /** The database normal key identifier */
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   protected Long id;
 
-  /** UUID identifier to be use in the entities */
+  /** An UUID identifier to be use in the entities */
   @NotNull
   @Column(nullable = false)
   protected UUID identifier;

@@ -11,7 +11,7 @@
 [[resources]]
 == Resource Contexts
 
-=== <<api-guide-products.adoc#, Products API Context>>
+=== <<api-guide-product.adoc#, Products API Context>>
 
-=== <<api-guide-productorderss.adoc#, Products Orders API Context>>
+=== <<api-guide-product-order.adoc#, Products Orders API Context>>
 

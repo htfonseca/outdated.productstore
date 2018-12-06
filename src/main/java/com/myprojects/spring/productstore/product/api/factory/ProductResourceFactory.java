@@ -14,14 +14,25 @@ import java.util.stream.Collectors;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
-/** A simple factory that converts product entity to product resources to send to the user. */
+/**
+ * A example of a factory that will convert the entities to the corresponding resources.
+ *
+ * <p>This strategy allow the flexibility for constructing the resources with the corresponding
+ * needs of the API and adding the needed links to support HATOES.
+ */
 @Component
 public class ProductResourceFactory {
 
+  /**
+   * Build a simple {@link ProductResource} from a {@link Product} and add it with the self link to
+   * retrieve the resource and the update link to update the corresponding resource.
+   *
+   * @param product a entity {@link Product}
+   * @return a resource {@link ProductResource}
+   */
   public static ProductResource build(Product product) {
 
-    ProductResource resource =
-        new ProductResource(product.getIdentifier(), product.getName(), product.getPrice());
+    ProductResource resource = new ProductResource(product);
 
     resource.add(
         linkTo(methodOn(ProductController.class).readProduct(product.getIdentifier()))
@@ -34,6 +45,13 @@ public class ProductResourceFactory {
     return resource;
   }
 
+  /**
+   * Build a simple {@link ProductListResource} from a list of {@link Product}s and add it with the
+   * self link for future calls to the API.
+   *
+   * @param productList a list of entities {@link Product}
+   * @return a resource {@link ProductListResource}
+   */
   public static ProductListResource build(List<Product> productList) {
 
     List<ProductResource> productResourceList =
@@ -46,6 +64,13 @@ public class ProductResourceFactory {
     return productListResource;
   }
 
+  /**
+   * Build a simple {@link ProductPageResource} based on a retrieved {@link Page} of {@link
+   * Product}s and add it with the self link for future calls to the API.
+   *
+   * @param productPage a page of entities {@link Product}
+   * @return a resource {@link ProductPageResource}
+   */
   public static ProductPageResource build(Page<Product> productPage) {
 
     List<ProductResource> productResourceList =

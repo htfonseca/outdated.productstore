@@ -12,7 +12,14 @@ import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-/** Entity class that represents a product */
+/**
+ * Simple entity of a instance of a {@link Product}. It contains all the corresponding annotation
+ * for the hibernate to generate the database tables.
+ *
+ * <p>Also creates a index from the identifier {@link UUID} that will be used to retrieve the
+ * products. This allow a detachment of the id key value of the database and simplify the data
+ * migrations.
+ */
 @Entity
 @Table(indexes = @Index(name = "UK_Product_Identifier", columnList = "identifier", unique = true))
 public class Product extends AbstractEntity {

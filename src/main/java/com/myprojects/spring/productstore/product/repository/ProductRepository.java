@@ -6,7 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
-/** Simple product repository class */
+/**
+ * Very simple {@link JpaRepository} with only a method to find a {@link Product} by a {@link UUID}.
+ */
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 

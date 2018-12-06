@@ -4,7 +4,13 @@ import org.springframework.hateoas.ResourceSupport;
 
 import java.util.List;
 
-/** Simple page resource for products */
+/**
+ * Simple representation of a {@link org.springframework.data.domain.Pageable} resource to support
+ * the parse for json and the corresponding string HATOES links (if needed).
+ *
+ * <p>This representation encapsulates the normal properties of a page resource that are: List of
+ * resources, Page number, Page size, Total pages and Total elements.
+ */
 public class ProductPageResource extends ResourceSupport {
 
   private List<ProductResource> content;

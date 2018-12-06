@@ -6,9 +6,9 @@ public class ResourceNotFoundException extends RuntimeException {
   private final String messageKey;
 
   /**
-   * Constructor to initialize exception with a message key to translate.
+   * Constructor to initialize exception with a message key (can be used for translation).
    *
-   * @param messageKey the message key to translate
+   * @param messageKey the message key
    */
   public ResourceNotFoundException(String messageKey) {
     super(messageKey);
@@ -16,9 +16,10 @@ public class ResourceNotFoundException extends RuntimeException {
   }
 
   /**
-   * Constructor to initialize exception with a message key to translate and error cause.
+   * Constructor to initialize exception with a message key (can be used for translation) and error
+   * cause.
    *
-   * @param messageKey the message key to translate
+   * @param messageKey the message key
    * @param cause the cause
    */
   public ResourceNotFoundException(String messageKey, Throwable cause) {

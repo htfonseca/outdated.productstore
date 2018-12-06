@@ -11,12 +11,14 @@ import org.springframework.data.web.HateoasPageableHandlerMethodArgumentResolver
 import org.springframework.data.web.PageableHandlerMethodArgumentResolver;
 import org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration;
 
-/** Custom Configuration of the Pageable default setting. */
+/**
+ * Custom Configuration for the {@link org.springframework.data.domain.Pageable} default settings.
+ */
 @Configuration
 @EnableConfigurationProperties
 public class PaginationConfiguration extends HateoasAwareSpringDataWebConfiguration {
 
-  @Value("${smarsite.pagination.maxPageSize: 100}")
+  @Value("${pagination.maxPageSize: 100}")
   private int maxPageSize;
 
   /**

@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 
-/** Dto that represents a parts of the product to be used in the json parser */
+/** Simple representation of a {@link Product} to support the input parse for json. */
 public class ProductDto {
 
   @NotNull

@@ -17,14 +17,28 @@ import java.util.UUID;
 @Service
 public class ProductBoundaryService {
 
+  /** Needed repositories for dealing with access to the persistence layers. */
   @Autowired ProductRepository productRepository;
 
+  /**
+   * Create operation that receives a {@link ProductDto}, creates a {@link Product} and calls the
+   * save method in the repository.
+   */
   @Transactional
   public Product createProduct(ProductDto productDto) {
     Product product = new Product(UUID.randomUUID(), productDto.getName(), productDto.getPrice());
     return productRepository.save(product);
   }
 
+  /**
+   * Read operation that receives a {@link UUID} identifier and try to retrieve the corresponding
+   * {@link Product} from the repository. If no product can be found it will throw a {@link
+   * ResourceNotFoundException} to the user can know that there is no product for the given
+   * identifier.
+   *
+   * <p>This operations is annotated with the 'readOnly' at true, so that the hibernate knows that
+   * no record will be change.
+   */
   @Transactional(readOnly = true)
   public Product readProduct(UUID identifier) {
 
@@ -37,16 +51,36 @@ public class ProductBoundaryService {
     return product;
   }
 
-  @Transactional(readOnly = true)
-  public Page<Product> readProducts(Pageable pageable) {
-    return productRepository.findAll(pageable);
-  }
-
+  /**
+   * Read operation that try to retrieve all the {@link Product} from the repository.
+   *
+   * <p>This operations is annotated with the 'readOnly' at true, so that the hibernate knows that
+   * no record will be change.
+   */
   @Transactional(readOnly = true)
   public List<Product> readProducts() {
     return productRepository.findAll();
   }
 
+  /**
+   * Read operation that receives a {@link Pageable} and try to retrieve a page of {@link Product}s
+   * from the repository.
+   *
+   * <p>This operations is annotated with the 'readOnly' at true, so that the hibernate knows that
+   * no record will be change.
+   */
+  @Transactional(readOnly = true)
+  public Page<Product> readProducts(Pageable pageable) {
+    return productRepository.findAll(pageable);
+  }
+
+  /**
+   * Update operation that receives a {@link UUID} identifier and a {@link ProductDto}, try to
+   * retrieve the corresponding {@link Product} from the repository, update it with the
+   * corresponding properties and call the save method. If no product can be found it will throw a
+   * {@link ResourceNotFoundException} to the user can know that there is no product for the given
+   * identifier.
+   */
   @Transactional
   public Product updateProduct(UUID identifier, ProductDto productDto) {
 
