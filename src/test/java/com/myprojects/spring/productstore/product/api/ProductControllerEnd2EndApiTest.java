@@ -44,6 +44,9 @@ import static org.springframework.restdocs.payload.PayloadDocumentation.*;
 import static org.springframework.restdocs.request.RequestDocumentation.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+/**
+ * End to end tests to verify and document (snippet creation) of the {@link ProductController} API
+ */
 @ExtendWith({RestDocumentationExtension.class, SpringExtension.class})
 @AutoConfigureRestDocs
 @AutoConfigureMockMvc
@@ -51,6 +54,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @DisplayName("Test that Product API")
 class ProductControllerEnd2EndApiTest {
 
+  /** Documentation snippets that represents the send and receive data. */
   private final RequestFieldsSnippet productDtoRequestSnippet =
       requestFields(
           fieldWithPath("name").description("Product name."),
@@ -99,6 +103,7 @@ class ProductControllerEnd2EndApiTest {
 
   @Autowired private MockMvc mockMvc;
 
+  /** Setup to create the products that will be used on the tests. */
   @BeforeEach
   void setUp() {
     List<Product> products = new LinkedList<>();
@@ -108,11 +113,17 @@ class ProductControllerEnd2EndApiTest {
     products.forEach(productRepository::saveAndFlush);
   }
 
+  /** Cleaning of the persistence layer in the end of the tests. */
   @AfterEach
   void tearDown() {
     productRepository.deleteAll();
   }
 
+  /**
+   * Test the creation of a product.
+   *
+   * @throws Exception is not expected
+   */
   @Test
   @DisplayName("can created a product successfully")
   void verifyAndDocumentCreateProductSuccessfully() throws Exception {
@@ -146,6 +157,11 @@ class ProductControllerEnd2EndApiTest {
                 productLinks));
   }
 
+  /**
+   * Test the read a product given an identifier.
+   *
+   * @throws Exception is not expected
+   */
   @Test
   @DisplayName("can get a product successfully")
   void verifyAndDocumentReadProductSuccessfully() throws Exception {
@@ -173,6 +189,11 @@ class ProductControllerEnd2EndApiTest {
                 productLinks));
   }
 
+  /**
+   * Test the read a list of products.
+   *
+   * @throws Exception is not expected
+   */
   @Test
   @DisplayName("can get a list of products successfully")
   void verifyAndDocumentReadProductsSuccessfully() throws Exception {
@@ -195,6 +216,11 @@ class ProductControllerEnd2EndApiTest {
                 simpleLinksSnippet));
   }
 
+  /**
+   * Test the read a page of products.
+   *
+   * @throws Exception is not expected
+   */
   @Test
   @DisplayName("can get a page of products successfully")
   void verifyAndDocumentReadProductsSuccessfullyWithPageable() throws Exception {
@@ -239,6 +265,11 @@ class ProductControllerEnd2EndApiTest {
                 simpleLinksSnippet));
   }
 
+  /**
+   * Test the update of products given a identifier.
+   *
+   * @throws Exception is not expected
+   */
   @Test
   @DisplayName("can update a product successfully")
   void verifyAndDocumentUpdateProductSuccessfully() throws Exception {

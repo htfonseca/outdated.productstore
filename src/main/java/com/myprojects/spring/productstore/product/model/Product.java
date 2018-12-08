@@ -51,7 +51,7 @@ public class Product extends AbstractEntity {
 
   @Override
   public String toString() {
-    return String.format("Product[id=%d, name='%s', price='%s']", id, name, price);
+    return String.format("Product[identifier=%d, name='%s', price='%s']", identifier, name, price);
   }
 
   public String getName() {

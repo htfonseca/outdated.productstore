@@ -13,5 +13,5 @@
 
 === <<api-guide-product.adoc#, Products API Context>>
 
-=== <<api-guide-product-order.adoc#, Products Orders API Context>>
+=== <<api-guide-order.adoc#, Products Orders API Context>>
 

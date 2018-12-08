@@ -6,39 +6,39 @@ Content-Length: 1313
 
 {
   "content" : [ {
-    "identifier" : "26fa4cf2-2c11-4db9-9d23-57cae813eb67",
+    "identifier" : "28c929d8-2fa8-41d1-80ef-c9f712e40f94",
     "name" : "Product1",
     "price" : 1.11,
     "_links" : {
       "self" : {
-        "href" : "http://localhost:8080/store/products/26fa4cf2-2c11-4db9-9d23-57cae813eb67"
+        "href" : "http://localhost:8080/store/products/28c929d8-2fa8-41d1-80ef-c9f712e40f94"
       },
       "update" : {
-        "href" : "http://localhost:8080/store/products/26fa4cf2-2c11-4db9-9d23-57cae813eb67"
+        "href" : "http://localhost:8080/store/products/28c929d8-2fa8-41d1-80ef-c9f712e40f94"
       }
     }
   }, {
-    "identifier" : "e4e65f05-0d47-4c78-9a8a-eccfdb9afa67",
+    "identifier" : "c59603c8-e584-42d0-a92c-390199319264",
     "name" : "Product2",
     "price" : 2.22,
     "_links" : {
       "self" : {
-        "href" : "http://localhost:8080/store/products/e4e65f05-0d47-4c78-9a8a-eccfdb9afa67"
+        "href" : "http://localhost:8080/store/products/c59603c8-e584-42d0-a92c-390199319264"
       },
       "update" : {
-        "href" : "http://localhost:8080/store/products/e4e65f05-0d47-4c78-9a8a-eccfdb9afa67"
+        "href" : "http://localhost:8080/store/products/c59603c8-e584-42d0-a92c-390199319264"
       }
     }
   }, {
-    "identifier" : "d7c73547-4cee-41ad-b4ac-fc36c07a20d3",
+    "identifier" : "5f4ccb4d-06f2-461a-9096-8cb2a3caa5b7",
     "name" : "Product3",
     "price" : 3.33,
     "_links" : {
       "self" : {
-        "href" : "http://localhost:8080/store/products/d7c73547-4cee-41ad-b4ac-fc36c07a20d3"
+        "href" : "http://localhost:8080/store/products/5f4ccb4d-06f2-461a-9096-8cb2a3caa5b7"
       },
       "update" : {
-        "href" : "http://localhost:8080/store/products/d7c73547-4cee-41ad-b4ac-fc36c07a20d3"
+        "href" : "http://localhost:8080/store/products/5f4ccb4d-06f2-461a-9096-8cb2a3caa5b7"
       }
     }
   } ],

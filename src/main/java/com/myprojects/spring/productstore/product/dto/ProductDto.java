@@ -18,7 +18,10 @@ public class ProductDto {
   @DecimalMin(Product.MIN_PRICE)
   private BigDecimal price;
 
-  public ProductDto() {}
+  /** Constructor for JSON. */
+  public ProductDto() {
+    // Empty
+  }
 
   public ProductDto(String name, BigDecimal price) {
     this.name = name;

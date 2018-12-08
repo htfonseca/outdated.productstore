@@ -5,15 +5,15 @@ Content-Type: application/hal+json;charset=UTF-8
 Content-Length: 356
 
 {
-  "identifier" : "0b35638e-5e1d-4c46-8633-b9f8ce667b9d",
+  "identifier" : "82ff1893-3baa-4564-a016-3e1a2853eddb",
   "name" : "MyTestProductName",
   "price" : 4.44,
   "_links" : {
     "self" : {
-      "href" : "http://localhost:8080/store/products/0b35638e-5e1d-4c46-8633-b9f8ce667b9d"
+      "href" : "http://localhost:8080/store/products/82ff1893-3baa-4564-a016-3e1a2853eddb"
     },
     "update" : {
-      "href" : "http://localhost:8080/store/products/0b35638e-5e1d-4c46-8633-b9f8ce667b9d"
+      "href" : "http://localhost:8080/store/products/82ff1893-3baa-4564-a016-3e1a2853eddb"
     }
   }
 }

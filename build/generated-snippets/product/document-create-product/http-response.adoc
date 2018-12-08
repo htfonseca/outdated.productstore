@@ -1,20 +1,20 @@
 [source,http,options="nowrap"]
 ----
 HTTP/1.1 201 Created
+Location: http://localhost:8080/store/products/15d73320-3d61-4be9-8101-991f44117352
 Content-Type: application/hal+json;charset=UTF-8
 Content-Length: 356
-Location: http://localhost:8080/store/products/1306d388-8f57-49ea-9eea-fe5e7199736f
 
 {
-  "identifier" : "1306d388-8f57-49ea-9eea-fe5e7199736f",
+  "identifier" : "15d73320-3d61-4be9-8101-991f44117352",
   "name" : "MyTestProductName",
   "price" : 4.44,
   "_links" : {
     "self" : {
-      "href" : "http://localhost:8080/store/products/1306d388-8f57-49ea-9eea-fe5e7199736f"
+      "href" : "http://localhost:8080/store/products/15d73320-3d61-4be9-8101-991f44117352"
     },
     "update" : {
-      "href" : "http://localhost:8080/store/products/1306d388-8f57-49ea-9eea-fe5e7199736f"
+      "href" : "http://localhost:8080/store/products/15d73320-3d61-4be9-8101-991f44117352"
     }
   }
 }

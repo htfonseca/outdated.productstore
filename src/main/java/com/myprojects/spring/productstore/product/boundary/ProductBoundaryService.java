@@ -45,7 +45,7 @@ public class ProductBoundaryService {
     Product product = productRepository.findByIdentifier(identifier);
     if (product == null) {
       throw new ResourceNotFoundException(
-          "The product with the identifier \"" + identifier + "\" ] wasn't found.");
+          "The product with the identifier \"" + identifier + "\" wasn't found.");
     }
 
     return product;

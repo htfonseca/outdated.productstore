@@ -1,0 +1,112 @@
+= Order REST Service API Guide
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+== Orders
+
+Order API guide
+
+// ***********************************************************************************
+
+[[resources-create-order]]
+=== Create an order
+
+Create a order and store it in the database.
+
+[[resources-create-order-access]]
+==== Request
+
+A `POST` request is used to send the information of the new order to be added.
+
+Path parameters:
+
+include::{snippets}/order/document-create-order/http-request.adoc[]
+
+include::{snippets}/order/document-create-order/curl-request.adoc[]
+
+==== Request fields
+
+include::{snippets}/order/document-create-order/request-fields.adoc[]
+
+==== Example response
+
+include::{snippets}/order/document-create-order/http-response.adoc[]
+
+==== Response fields
+
+include::{snippets}/order/document-create-order/response-fields.adoc[]
+
+[[resources-create-order-links]]
+==== Links
+
+include::{snippets}/order/document-create-order/links.adoc[]
+
+// ***********************************************************************************
+
+[[resources-get-order]]
+=== Get an order
+
+Get an order from the database
+
+[[resources-get-order-access]]
+==== Request
+
+A `GET` request is used to get an order that was added.
+
+Path parameters:
+
+include::{snippets}/order/document-get-order/path-parameters.adoc[]
+
+include::{snippets}/order/document-get-order/http-request.adoc[]
+
+include::{snippets}/order/document-get-order/curl-request.adoc[]
+
+==== Example response
+
+include::{snippets}/order/document-get-order/http-response.adoc[]
+
+==== Response fields
+
+include::{snippets}/order/document-get-order/response-fields.adoc[]
+
+[[resources-get-order-links]]
+==== Links
+
+include::{snippets}/order/document-get-order/links.adoc[]
+
+// ***********************************************************************************
+
+[[resources-get-list-order]]
+=== Get a list of orders
+
+Get a list of orders from the database
+
+[[resources-get-list-order-access]]
+==== Request
+
+A `GET` request is used to get a list of orders that were added.
+
+Path parameters:
+
+include::{snippets}/order/document-get-list-order/http-request.adoc[]
+
+include::{snippets}/order/document-get-list-order/curl-request.adoc[]
+
+==== Example response
+
+include::{snippets}/order/document-get-list-order/http-response.adoc[]
+
+==== Response fields
+
+include::{snippets}/order/document-get-list-order/response-fields.adoc[]
+
+[[resources-get-list-order-links]]
+==== Links
+
+include::{snippets}/order/document-get-list-order/links.adoc[]
+
+// ***********************************************************************************

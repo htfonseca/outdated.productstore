@@ -1,6 +1,6 @@
 [source,http,options="nowrap"]
 ----
-POST /store/products/0b35638e-5e1d-4c46-8633-b9f8ce667b9d HTTP/1.1
+POST /store/products/82ff1893-3baa-4564-a016-3e1a2853eddb HTTP/1.1
 Content-Length: 52
 Accept-Language: en
 Content-Type: application/json;charset=UTF-8
