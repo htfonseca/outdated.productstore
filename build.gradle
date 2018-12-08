@@ -21,7 +21,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'org.asciidoctor.convert'
 
 group = 'com.myprojects.spring'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 sourceCompatibility = 1.8
 
 repositories {

@@ -1,96 +1,86 @@
 # Simple Store API Backend Application
-This application provides backend RESTful services for handling 
-for a simple store of products.
+This project serves as an example of a  Spring Boot RESTful application, which 
+represents a simple store can contain products and orders. 
 
-It support two API:
-1) A product API were we can add and update products.
-2) A order API were we can use the products to create orders.
+It contains two API:
+1) A product API were the user can add and update products.
+2) A order API were the user can use the products to create orders, with parcels.
 
 ## Starting the application
 
 ### By Gradle tasks (optional way)
-The application can also be started using the folder gradle task:
+The application can be started using the following gradle task:
 
 ``
 ./gradlew clean bootRun
 ``
  
-Also the following task are also available:
+Also are also the available tasks:
 - ./gradlew clean - clean the project folder  
 - ./gradlew build - build the project and the corresponding tests
 - ./gradlew asciidoctor - use the test snippet results to generate the documentation
 
 ### By using the IDE
-The application is started by just running the class:
+The application can be started by just running the main class:
 
 ``
 com.myprojects.spring.productstore.StoreApplication
 ``
 
 ### By running .jar file
-The last way to start the application is by running the jar file.
+The last way to start the application is by running the jar file
+with the following command in the terminal:
 
 ``
-com.myprojects.spring.productstore.StoreApplication
+java -jar productstore-0.0.1.jar
 ``
 
-
-
-
-
-
--------
 ## Accessing the backend
-The backend application is configured by default to run under port _8080_.
+The backend application is configured by default to run under port _8080_.<br>
 This can be reconfigured by setting the property __server.port__ in _application.yml_ file.
 
+### Access Points
+There are two main access points for the backend application when it is running locally:
 
--------
+To access the base entry point to product REST api the following link can be use:<br>
+[localhost:8080/store/products](http://localhost:8080/store/products).
 
+To access the base entry point to orders REST api the following link can be use:<br> 
+[localhost:8080/store/orders](http://localhost:8080/store/orders).
 
+## Accessing the documentation REST api
+To access the api documentation just open your web browser on:<br>
+[localhost:8080/docs/api-guide.html](http://localhost:8080/docs/api-guide.html)
 
-To open the web application just locate your web browser to [localhost:8080](http://localhost:8080).
+Please note that this only works when starting the packaged:
+1) Using the spring boot jar generated.
+2) Using the spring boot runner (./gradlew bootRun)
 
-To access the entry point to tasks REST api locate the web browser to [localhost:8080/v1/tasks](http://localhost:8080/v1/tasks).<br>
-To access the entry point to tasks REST api (filtered by assignee) locate the web browser to [localhost:8080/v1/tasks?assignee=xyz](http://localhost:8080/v1/tasks?assignee=xzz).
+It is also possible to read the documentation without starting the application using the following 
+package gradle task:
 
-## Accessing the documentation for task REST api
-To access the api documentation just open your web browser on [localhost:8080/docs/api-guide.html](http://localhost:8080/docs/api-guide.html)
+``
+./gradlew asciidoctor
+``
 
-Please note that this only works when starting the packaged spring boot jar file
-or when accessing the deployed backend in clodufoundry
+This task will generate the documentation static files on the project folder 
+_build/asciidoc/html5_.
+
+## Accessing the store solution
+This application uses a simples generic h2 memory database for simplicity propose.
+To access the UI of it just open your web browser on:<br>
+[localhost:8080/console](http://localhost:8080/console)
+
+The configuration used to access should be the following:
+```
+Driver Class: org.h2.Driver
+JDBC URL:     jdbc:h2:mem:store 	    
+User Name:    sa
+Password:
+```
 
 ## Monitoring access points
-By default there are provided several monitoring endpoints on same port _8080_.
-This port can also be reconfigured using property __management.port__ in _application.properties_ file.
+No monitoring access point were included.
 
-Access points here are:
-
-- [Show application health info (is application alive?)](http://localhost:8080/health)
-- [Show application info](http://localhost:8080/info)
-- [Show all active configuration properties](http://localhost:8080/configprops)
-- [List all available monitoring (actuator) endpoints](http://localhost:8080/actuator)
-
-## Deploy the application to CloudFoundry
-To deploy the application to e.g. local [PCFDev](https://docs.pivotal.io/pcf-dev/) use the following command
-
-``
-cf push tasks -p [path to your workspace]/smartsite-tasks/build/libs/smartsite-tasks-0.0.1-SNAPSHOT.jar
-``
-
-After successful push the tasks backend application can be accessed using [http://tasks.local.pcfdev.io](http://tasks.local.pcfdev.io) on PCFDev.
 ## Architecture
-All backend applications follow the _microservice_ archtictural style using [spring boot](http://projects.spring.io/spring-boot/).
-Further it is build upon a full stack architecture (with RESTful api layer on top).
-
-We will use the [Entity-Control-Boundary Pattern](http://epf.eclipse.org/wikis/openup/core.tech.common.extend_supp/guidances/guidelines/entity_control_boundary_pattern_C4047897.html) for separating the layers.
-This pattern will then be mapped to the spring stereotypes __RestController__, __Service__ and __Repository__. Dependent on which persistence technology is used the data layer
-will be represented by JPA __Entity__ classes, MongoDB __Document__ classes etc.
-
-## Profiles
-Without any profile the backend application starts with security on by default.
-I.e. to access any REST Api you need a valid JWT token. Otherwise you get a 401 status.
-
-Currently the application can be started using following profiles:
-
-- _dev_: This profile disables security of tasks backend completely
+TODO
