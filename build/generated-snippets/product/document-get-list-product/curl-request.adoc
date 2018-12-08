@@ -1,6 +1,0 @@
-[source,bash]
-----
-$ curl 'http://localhost:8080/store/products/' -i -X GET \
-    -H 'Accept-Language: en' \
-    -H 'Accept: application/hal+json;charset=UTF-8'
-----
